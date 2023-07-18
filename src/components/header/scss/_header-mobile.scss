@@ -54,6 +54,8 @@
 
         #menu_1:checked~.header__list {
             transform: scaleX(1);
+         
+
         }
 
         #menu_1:checked~.menu__title>img[alt=h-menu] {
@@ -65,8 +67,19 @@
             transition: all 400ms linear;
             transition-delay: 400ms;
             opacity: 1;
+
         }
 
+        @keyframes menuAnim {
+            50% {
+                padding-bottom: 200px;
+            }
+
+            100% {
+                padding-bottom: 0;
+
+            }
+        }
     }
 
     &__list {
@@ -84,7 +97,7 @@
         transition: all 200ms linear;
         @include flex(column, center, wrap);
         background-color: rgba(0, 0, 0, 0.9);
-
+        height: 100vh;
         &-item {
             width: 100%;
         }
