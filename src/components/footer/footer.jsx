@@ -15,8 +15,11 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer__wrapper">
-          <div className="footer__logo">
+          {/* <div className="footer__logo">
             <img src={footerLogo} alt="" />
+          </div> */}
+          <div className="footer__info">
+            Все запросы должны отправляться на почту kelatto@invariancerecords.com
           </div>
           <ul className="footer__list">
             <li className="footer__list-item">

@@ -643,6 +643,21 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.footer__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(5px);
+  font-size: 16px;
+  font-family: "Raleway";
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: inherit;
+  text-align: center;
+  line-height: 130%;
+  order: 2;
+  padding: 16px 20px;
+}
 .footer__logo {
   display: flex;
   flex-direction: row;
@@ -651,6 +666,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   flex-basis: 100%;
   order: 2;
+  display: none;
 }
 .footer__logo img {
   width: 80%;
@@ -658,7 +674,7 @@ input::-webkit-inner-spin-button {
 }
 .footer__list {
   width: 100%;
-  padding: 16px 20px;
+  padding: 0 20px;
   margin-top: 16px;
   display: flex;
   flex-direction: row;
@@ -666,6 +682,12 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
   order: 1;
   list-style-type: none;
+}
+.footer__list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .footer__list-link {
   font-size: 16px;
@@ -678,6 +700,7 @@ input::-webkit-inner-spin-button {
   display: block;
   transition: color 600ms;
   position: relative;
+  padding: 5px 8px;
 }
 .footer__list-link::after {
   transition: all 600ms linear;
@@ -705,9 +728,7 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 24px;
-}
-.footer__list-item + .footer__list-item {
-  margin-left: 24px;
+  margin: 0 12px;
 }
 
 @media (min-width: 750px) {
@@ -715,24 +736,22 @@ input::-webkit-inner-spin-button {
     padding: 0 20px;
   }
   .footer__wrapper {
-    padding: 16px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: no-wrap;
     align-items: center;
   }
-  .footer__logo {
-    flex-basis: auto;
-    order: 1;
+  .footer__info {
+    width: 100%;
   }
   .footer__list {
     margin-top: 0;
     padding: 0;
     order: 2;
-    width: 70%;
+    width: 100%;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
   }
   .footer__list-item {
     margin-top: 0;
@@ -744,7 +763,12 @@ input::-webkit-inner-spin-button {
     margin: 0 auto;
   }
   .footer__list {
-    width: 50%;
+    width: 45%;
+    margin-top: 0;
+  }
+  .footer__info {
+    width: 45%;
+    margin-top: 0;
   }
 }
 .artists .container {

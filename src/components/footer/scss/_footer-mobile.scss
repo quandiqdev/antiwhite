@@ -11,11 +11,23 @@
 
     }
 
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(5px);
+        @include font(16px, $ffRalewayMed, 500, #ffffff, inherit, center, 130%);
+        order: 2;
+        padding: 16px 20px;
+
+    }
+
     &__logo {
         @include flex(row, center, inherit);
         align-items: center;
         flex-basis: 100%;
         order: 2;
+        display: none;
 
         img {
             width: 80%;
@@ -25,17 +37,25 @@
 
     &__list {
         width: 100%;
-        padding: 16px 20px;
+        padding: 0 20px;
         margin-top: 16px;
         @include flex(row, center, wrap);
         order: 1;
         list-style-type: none;
+
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center
+        }
 
         &-link {
             @include font(16px, $ffRalewayMed, 500, #ffffff, inherit, center, 130%);
             display: block;
             transition: color 600ms;
             position: relative;
+            padding: 5px 8px;
 
             &::after {
                 transition: all 600ms linear;
@@ -64,12 +84,9 @@
             @include flex(row, center, wrap);
             align-items: center;
             margin-top: 24px;
-
+            margin: 0 12px;
         }
 
-        &-item+&-item {
-            margin-left: 24px;
-        }
 
     }
 }
