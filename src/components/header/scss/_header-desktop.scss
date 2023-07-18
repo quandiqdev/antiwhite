@@ -10,24 +10,50 @@
         }
 
         &__list {
-            @include flex(row, center, wrap);
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             width: auto;
             left: 0;
             margin: 0;
-            position: relative;
             transform: scale(1);
 
             &-item+&-item {
-                margin-top: 0;
                 margin-left: 24px;
+                margin-top: 0;
+            }
+
+            &-item {
+                @include flex(row, center, wrap);
+                align-items: center;
+                width: min-content;
             }
 
             &-link {
-                transition: color 600ms;
+                transition: all 600ms linear;
+                position: relative;
+
+                &::after {
+                    transition: all 600ms linear;
+                    @include pseudo;
+                    top: 80%;
+                    left: 0;
+                    height: 1px;
+                    width: 100%;
+                    background-color: #fff;
+                    transform: scaleX(0);
+                }
             }
 
             &-link:hover {
-                color:#8B77FE;
+
+                color: #8B77FE;
+
+                &::after {
+                    transform: scaleX(0.5);
+                }
             }
         }
 

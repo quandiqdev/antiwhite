@@ -9,13 +9,13 @@
   
     &__subtitle {
       letter-spacing: -0.54px;
-      @include font(18px, $ffRalewaySemiBold, 600, #8B77FE, uppercase, left, 95%);
+      @include font(16px, $ffRalewaySemiBold, 600, #8B77FE, uppercase, left, 95%);
     }
   
     &__title {
       margin-top: 16px;
       letter-spacing: -0.8px;
-      @include font(40px, $ffRalewayBold, 700, #fff, inherit, left, 95%);
+      @include font(36px, $ffRalewayBold, 700, #fff, inherit, left, 95%);
     }
   
     &__news {
@@ -73,7 +73,7 @@
         z-index: 3;
   
         .news__link-title {
-          @include font(32px, $ffRalewaySemiBold, 600, #fff, inherit, left, 95%);
+          @include font(28px, $ffRalewaySemiBold, 600, #fff, inherit, left, 95%);
           letter-spacing: -0.64px;
   
           position: relative;
@@ -87,7 +87,7 @@
           @include flex(row, left, inherit);
           align-items: center;
           @include font(
-            18px,
+            16px,
             $ffRalewayMed,
             500,
             rgba(255, 255, 255, 0.56),

@@ -16,6 +16,7 @@
         @include flex(row, space-between, inherit);
         align-items: center;
         height: auto;
+        width: 80%;
 
         img {
             width: 100%;
@@ -65,28 +66,31 @@
             transition-delay: 400ms;
             opacity: 1;
         }
+
     }
 
     &__list {
+        display: flex;
         align-items: center;
         list-style-type: none;
         position: absolute;
         left: -20px;
-        transform-origin: right;
-        transform: scaleX(0);
+        transform-origin: top right;
+        transform: scaleY(0);
         top: 100%;
         width: calc(100% + 40px);
         height: auto;
         z-index: 2;
-        transition: all 400ms linear;
+        transition: all 200ms linear;
         @include flex(column, center, wrap);
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.9);
 
         &-item {
-            margin-bottom: 24px;
+            width: 100%;
         }
 
         &-link {
+            padding: 12px 0;
             @include font(16px, $ffRalewayMed, 500, #ffffff, inherit, center, 130%);
             display: block;
             text-align: center;
@@ -114,8 +118,17 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .anim {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: moveup 500ms linear forwards;
+        }
 
         &-logo {
+
             width: 206px;
             height: 99px;
 
@@ -125,11 +138,23 @@
             }
         }
 
+        .logo__anim {
+            animation-delay: 500ms;
+        }
+
+        .title__anim {
+            animation-delay: 1000ms;
+        }
+
+        .subtitle__anim {
+            animation-delay: 1500ms;
+        }
+
         &-title {
             margin: 24px 0;
             font-style: normal;
             align-self: stretch;
-            @include font(64px, $ffRalewayBold, 700, #ffffff, inherit, center, 51.415px);
+            @include font(54px, $ffRalewayBold, 700, #ffffff, inherit, center, 51.415px);
             letter-spacing: -1.28px;
             background: #8173D2;
             background: radial-gradient(circle farthest-corner at center center, #8173D2 0%, #FFFFFF 100%);
@@ -138,8 +163,19 @@
         }
 
         &-subtitle {
-            @include font(24px, $ffRalewayMed, 500, rgba(255, 255, 255, 0.56), inherit, center, 130%);
+            @include font(20px, $ffRalewayMed, 500, rgba(255, 255, 255, 0.56), inherit, center, 130%);
             align-self: stretch;
+            animation-delay: 1.5s;
         }
+
+
+
+        @keyframes moveup {
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     }
 }

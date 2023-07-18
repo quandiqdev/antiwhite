@@ -18,7 +18,7 @@
         order: 2;
 
         img {
-            width: 122px;
+            width: 80%;
             height: auto;
         }
     }
@@ -35,11 +35,26 @@
             @include font(16px, $ffRalewayMed, 500, #ffffff, inherit, center, 130%);
             display: block;
             transition: color 600ms;
+            position: relative;
+
+            &::after {
+                transition: all 600ms linear;
+                @include pseudo;
+                top: 110%;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background-color: #fff;
+                transform: scaleX(0);
+            }
 
             &:hover {
                 cursor: pointer;
                 color: #8B77FE;
 
+                &::after {
+                    transform: scaleX(0.5);
+                }
             }
 
         }

@@ -13,17 +13,17 @@
     }
 
     &__subtitle {
-        @include font(18px, $ffRalewaySemiBold, 600, #8B77FE, uppercase, left, 95%);
+        @include font(16px, $ffRalewaySemiBold, 600, #8B77FE, uppercase, left, 95%);
     }
 
     &__title {
         margin: 16px 0;
         letter-spacing: -0.8px;
-        @include font(40px, $ffRalewayBold, 700, #fff, inherit, left, 95%);
+        @include font(36px, $ffRalewayBold, 700, #fff, inherit, left, 95%);
     }
 
     &__subtitle-bottom {
-        @include font(18px, $ffRalewayReg, 400, rgba(255, 255, 255, 0.56), inherit, left, 130%);
+        @include font(16px, $ffRalewayReg, 400, rgba(255, 255, 255, 0.56), inherit, left, 130%);
     }
 
     .form__input {
@@ -43,7 +43,7 @@
         div {
             label {
                 letter-spacing: -0.48px;
-                @include font(16px, $ffRalewayMed, 500, rgba(255, 255, 255, 0.56), inherit, left, 130%);
+                @include font(14px, $ffRalewayMed, 500, rgba(255, 255, 255, 0.56), inherit, left, 130%);
             }
 
             input {
@@ -51,10 +51,10 @@
                 outline: none;
                 border: none;
                 letter-spacing: -0.48px;
-                @include font(16px, $ffRalewayBold, 700, #ffffff, inherit, left, 130%);
+                @include font(14px, $ffRalewayBold, 700, #ffffff, inherit, left, 130%);
 
                 &::placeholder {
-                    @include font(16px, $ffRalewayBold, 700, #ffffff, inherit, left, 130%);
+                    @include font(14px, $ffRalewayBold, 700, #ffffff, inherit, left, 130%);
 
                 }
             }
@@ -72,14 +72,14 @@
             width: 100%;
             border-radius: 8px;
             background: #8B77FE;
-            @include font(16px, $ffRalewaySemiBold, 600, #fff, inherit, left, 100%);
+            @include font(14px, $ffRalewaySemiBold, 600, #fff, inherit, left, 100%);
         }
 
         &-text {
             margin-top: 12px;
             color: rgba(255, 255, 255, 0.66);
             letter-spacing: -0.48px;
-            @include font(16px, $ffRalewayMed, 500, rgba(255, 255, 255, 0.66), inherit, center, 130%);
+            @include font(14px, $ffRalewayMed, 500, rgba(255, 255, 255, 0.66), inherit, center, 130%);
             @include flex(row, center, no-wrap);
             background-color: #0D0D0D !important;
             align-items: center;
