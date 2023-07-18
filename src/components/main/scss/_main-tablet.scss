@@ -1,0 +1,17 @@
+@media (min-width:750px) {
+    .main {
+  
+      .container {
+        padding: 0 20px;
+      }
+      &__news{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-item{
+            width: 48%;
+            margin-top: 24px!important;
+        }
+      }
+    }
+  }

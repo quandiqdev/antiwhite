@@ -1,0 +1,60 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.982);
+
+    .container {
+        padding: 0 20px;
+    }
+
+    &__wrapper {
+        margin-top: 120px;
+        @include flex(row, space-between, wrap);
+
+    }
+
+    &__logo {
+        @include flex(row, center, inherit);
+        align-items: center;
+        flex-basis: 100%;
+        order: 2;
+
+        img {
+            width: 122px;
+            height: auto;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        padding: 16px 20px;
+        margin-top: 16px;
+        @include flex(row, center, wrap);
+        order: 1;
+        list-style-type: none;
+
+        &-link {
+            @include font(16px, $ffRalewayMed, 500, #ffffff, inherit, center, 130%);
+            display: block;
+            transition: color 600ms;
+
+            &:hover {
+                cursor: pointer;
+                color: #8B77FE;
+
+            }
+
+        }
+
+
+        &-item {
+            @include flex(row, center, wrap);
+            align-items: center;
+            margin-top: 24px;
+
+        }
+
+        &-item+&-item {
+            margin-left: 24px;
+        }
+
+    }
+}

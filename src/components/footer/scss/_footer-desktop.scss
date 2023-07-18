@@ -1,0 +1,13 @@
+@media (min-width:1020px) {
+    .footer {
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        &__list {
+            width: 50%;
+
+        }
+    }
+}

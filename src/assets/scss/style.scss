@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    color: #fff;
+    background-color: #000000; /* Задаем черный цвет фона */
+    background-image: url(./../images/main/Background.png); /* Добавляем изображение фона */
+    background-position:0 0 ; /* Выравнивание изображения по центру */
+    background-size: cover;
+    background-repeat: repeat-y; /* Запрет повторения изображения */
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+@import "./reset";
+@import "./vars";
+@import "./fonts";
+@import "./mixins";
+
+@import "../../components/header/scss/header-mobile";
+@import "../../components/header/scss/header-tablet";
+@import "../../components/header/scss/header-desktop";
+
+@import "../../components//main/scss/main-mobile";
+@import "../../components//main/scss/main-tablet";
+@import "../../components//main/scss/main-desktop";
+
+@import "../../components//form/scss/form-mobile";
+@import "../../components//form/scss/form-tablet";
+@import "../../components//form/scss/form-desktop";
+
+@import "../../components/footer/scss/footer-mobile";
+@import "../../components/footer/scss/footer-tablet";
+@import "../../components/footer/scss/footer-desktop";
+
+@import "../../components/artists/scss/artists-mobile";
+@import "../../components/artists/scss/artists-tablet";
+@import "../../components/artists/scss/artists-desktop";
+
+@import "../../components/services/scss/services-mobile";
+@import "../../components/services/scss/services-tablet";
+@import "../../components/services/scss/services-desktop";
+
+@import "../../components/shop/scss/shop-mobile";
+@import "../../components/shop/scss/shop-tablet";
+@import "../../components/shop/scss/shop-desktop";
+
+@import "../../components/single/scss/single-mobile";
+@import "../../components/single/scss/single-tablet";
+@import "../../components/single/scss/single-desktop";
+
+@import "../../components/album/scss/album-mobile";
+@import "../../components/album/scss/album-tablet";
+@import "../../components/album/scss/album-desktop";

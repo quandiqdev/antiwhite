@@ -1,0 +1,25 @@
+@media (min-width:1020px) {
+    .form {
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        &__wrapper {
+            @include flex(row, space-between, inherit);
+            align-items: flex-start;
+        }
+
+        &__info {
+
+            flex-basis: 618px;
+            margin-top: 52px;
+        }
+
+        &__input {
+            flex-basis: 419px;
+
+        }
+    }
+
+}

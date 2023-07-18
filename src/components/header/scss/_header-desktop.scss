@@ -1,0 +1,52 @@
+@media (min-width:1020px) {
+    .header {
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .menu__title {
+            display: none;
+        }
+
+        &__list {
+            @include flex(row, center, wrap);
+            width: auto;
+            left: 0;
+            margin: 0;
+            position: relative;
+            transform: scale(1);
+
+            &-item+&-item {
+                margin-top: 0;
+                margin-left: 24px;
+            }
+
+            &-link {
+                transition: color 600ms;
+            }
+
+            &-link:hover {
+                color:#8B77FE;
+            }
+        }
+
+        &__main {
+            padding-top: 100px;
+            background-color: black;
+            background-position: 0 0;
+
+
+            &-title {
+                @include font(96px, $ffRalewayBold, 700, #ffffff, inherit, center, 77.123px);
+            }
+
+            &-subtitle {
+                width: 491px;
+                margin: 0 auto;
+            }
+        }
+
+    }
+
+}
