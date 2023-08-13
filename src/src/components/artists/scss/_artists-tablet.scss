@@ -1,0 +1,22 @@
+@media (min-width:750px) {
+    .artists {
+  
+      .container {
+        padding: 0 20px;
+      }
+      &__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-item {
+            width: 49%;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid #0D0D0D;
+            background: #000;
+            margin-top: 12px;
+        }
+    }
+    }
+  }

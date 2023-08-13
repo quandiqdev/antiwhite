@@ -1,0 +1,29 @@
+@media (min-width:1020px) {
+    .main {
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        &__subtitle {
+            @include font(18px, $ffRalewaySemiBold, 600, #8B77FE, uppercase, left, 95%);
+
+        }
+
+        &__title {
+            letter-spacing: -0.96px;
+            max-width: 551px;
+            @include font(48px, $ffRalewayBold, 700, #fff, inherit, left, 95%);
+        }
+
+        &__news {
+            @include flex(row,space-between, inherit);
+
+            &-item+&-item {
+                margin-top: 48px;
+                margin-left: 24px;
+            }
+        }
+    }
+
+}
