@@ -117,7 +117,7 @@ export default function Form() {
                                     multiple
                                 />
                             </div>
-                        <button type="submit">Send</button>
+                        <button type="submit">Отправить</button>
                     </form>
                 </div>
 

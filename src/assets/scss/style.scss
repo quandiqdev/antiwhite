@@ -5,11 +5,11 @@ body {
     min-width: 320px;
     overflow-x: hidden;
     color: #fff;
-    background-color: #000000; /* Задаем черный цвет фона */
-    background-image: url(./../images/main/Background.png); /* Добавляем изображение фона */
-    background-position:0 0 ; /* Выравнивание изображения по центру */
+    background-color: #000000;
+    background-image: url(./../images/main/Background.webp);
+    background-position:0 0 ;
     background-size: cover;
-    background-repeat: repeat-y; /* Запрет повторения изображения */
+    background-repeat: repeat-y;
 }
 
 
