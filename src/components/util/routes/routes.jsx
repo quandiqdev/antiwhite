@@ -11,74 +11,72 @@ import Album from "../../album/album";
 import Intro from "../../intro/intro";
 export default function AppRoute() {
   return (
-    <div>
       <Routes>
         <Route
           path="/"
           element={
-            <>
+            <div className="body-wrapper">
               <Header />
               <Intro />
               <Main />
               <Form />
               <Footer />
-            </>
+            </div>
           }
         />
         <Route
           path="/singers"
           element={
-            <>
+            <div className="body-wrapper">
               <Header />
               <Artists />
               <Footer />
-            </>
+            </div>
           }
         />
 
         <Route
           path="/services"
           element={
-            <>
+            <div className="body-wrapper">
               <Header />
               <Services />
               <Footer />
-            </>
+            </div>
           }
         />
 
         <Route
           path="/shop"
           element={
-            <>
+            <div className="body-wrapper">
               <Header />
               <Shop />
               <Footer />
-            </>
+            </div>
           }
         />
 
         <Route
           path="/single"
           element={
-            <>
+            <div className="body-wrapper">
               <Header />
               <Single />
               <Footer />
-            </>
+            </div>
           }
         />
         <Route
           path="/album"
           element={
-            <>
+            <div className="body-wrapper">
               <Header />
               <Album />
               <Footer />
-            </>
+            </div>
           }
         />
       </Routes>
-    </div>
   );
 }

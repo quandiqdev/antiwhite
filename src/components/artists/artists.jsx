@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ArtistImg from "../../assets/images/main/artists.jpg";
 export default function Artists() {
   return (
-    <div className="artists">
+    <section className="artists">
       <div className="container">
         <div className="artists__wrapper">
           <p className="artists__subtitle">Артисты</p>
@@ -16,7 +16,6 @@ export default function Artists() {
                   <img src={ArtistImg} alt="artistImg" />
                 </div>
                 <p className="artists__list-name">
-                  Nickname Nickname Nickname Nickname Nickname Nickname Nickname
                   Nickname
                 </p>
                 <p className="artists__list-about">
@@ -88,6 +87,6 @@ export default function Artists() {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

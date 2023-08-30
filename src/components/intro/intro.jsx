@@ -1,7 +1,7 @@
 import mainLogo from "../../assets/images/main/header-main-logo.png";
 export default function Intro() {
   return (
-    <div className="intro">
+    <section className="intro">
       <div className="container">
         <div className="intro__inner">
           <div className="intro-logo anim logo__anim">
@@ -14,6 +14,6 @@ export default function Intro() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import singleImg from "../../assets/images/main/single.jpg";
 export default function Single() {
   return (
-    <div className="single">
+    <section className="single">
       <div className="container">
         <div className="single__wrapper">
           <p className="single__subtitle">Релизы</p>
@@ -24,7 +24,35 @@ export default function Single() {
                 Сингл
               </Link>
               <Link to="#" className="single__list-name">
-                Название трека афывоалф двоыалд фоыва лфвоыа дфлвоыа
+                Название трека
+              </Link>
+              <Link to="#" className="single__list-singer">
+                Nickname
+              </Link>
+            </li>
+            <li className="single__list-item">
+              <div className="single__list-img">
+                <img src={singleImg} alt="singleImg" />
+              </div>
+              <Link to="#" className="single__list-title">
+                Сингл
+              </Link>
+              <Link to="#" className="single__list-name">
+                Название трека
+              </Link>
+              <Link to="#" className="single__list-singer">
+                Nickname
+              </Link>
+            </li>
+            <li className="single__list-item">
+              <div className="single__list-img">
+                <img src={singleImg} alt="singleImg" />
+              </div>
+              <Link to="#" className="single__list-title">
+                Сингл
+              </Link>
+              <Link to="#" className="single__list-name">
+                Название трека
               </Link>
               <Link to="#" className="single__list-singer">
                 Nickname
@@ -44,38 +72,9 @@ export default function Single() {
                 Nickname
               </Link>
             </li>
-            <li className="single__list-item">
-              <div className="single__list-img">
-                <img src={singleImg} alt="singleImg" />
-              </div>
-              <Link to="#" className="single__list-title">
-                Сингл
-              </Link>
-              <Link to="#" className="single__list-name">
-                Название трека афывоалф двоыалд фоыва лфвоыа дфлвоыа
-              </Link>
-              <Link to="#" className="single__list-singer">
-                Nickname
-              </Link>
-            </li>
-            <li className="single__list-item">
-              <div className="single__list-img">
-                <img src={singleImg} alt="singleImg" />
-              </div>
-              <Link to="#" className="single__list-title">
-                Сингл
-              </Link>
-              <Link to="#" className="single__list-name">
-                Название трека афывоалф двоыалд фоыва лфвоыа дфлвоыа
-              </Link>
-              <Link to="#" className="single__list-singer">
-                Nickname
-              </Link>
-            </li>
-
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

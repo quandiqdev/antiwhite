@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export default function Services() {
   return (
-    <div className="services">
+    <section className="services">
       <div className="container">
         <div className="services__wrapper">
           <p className="services__subtitle">Услуги</p>
@@ -72,6 +72,6 @@ export default function Services() {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

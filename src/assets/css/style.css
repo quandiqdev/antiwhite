@@ -152,6 +152,7 @@ body {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
+  height: 100%;
   font-family: "Raleway";
   font-weight: 500;
   font-size: 18px;
@@ -163,6 +164,16 @@ body {
   background-image: url("./../images/main/Background.webp");
   background-position: 0 0;
   background-size: cover;
+}
+
+#root {
+  height: 100%;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .no-scroll {
@@ -349,7 +360,7 @@ body {
 }
 .intro {
   overflow: hidden;
-  margin-top: 80px;
+  padding-top: 80px;
   height: calc(100vh - 86px);
   background: url("../../assets/images/main/headermain-bg.webp");
   background-size: cover;
@@ -426,7 +437,6 @@ body {
 }
 @media (min-width: 1020px) {
   .intro {
-    margin-top: 100px;
     background-color: #000;
     background-position: center 0;
   }
@@ -599,7 +609,7 @@ body {
   }
 }
 .form {
-  margin-top: 116px;
+  margin: 116px 0 130px;
 }
 .form .container {
   padding: 0 20px;
@@ -742,12 +752,12 @@ body {
 }
 .footer {
   background-color: rgba(0, 0, 0, 0.9803921569);
+  margin-top: auto;
 }
 .footer .container {
   padding: 0 20px;
 }
 .footer__wrapper {
-  margin-top: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -854,7 +864,7 @@ body {
   }
 }
 .artists {
-  margin-top: 80px;
+  margin: 80px 0 130px;
 }
 .artists .container {
   padding: 0 20px;
@@ -965,7 +975,7 @@ body {
   }
 }
 .services {
-  margin-top: 80px;
+  margin: 80px 0 130px;
 }
 .services .container {
   padding: 0 20px;
@@ -1077,7 +1087,7 @@ body {
   }
 }
 .shop {
-  margin-top: 80px;
+  margin: 80px 0 130px;
 }
 .shop .container {
   padding: 0 20px;
@@ -1214,6 +1224,9 @@ body {
     transform: scale(1.2);
   }
 }
+.single {
+  margin: 80px 0 130px;
+}
 .single .container {
   padding: 0 20px;
 }
@@ -1223,7 +1236,6 @@ body {
   justify-content: center;
   flex-wrap: inherit;
   align-items: center;
-  padding-top: 80px;
 }
 .single__subtitle {
   color: #8b77fe;
@@ -1370,7 +1382,7 @@ body {
   }
 }
 .album {
-  margin-top: 80px;
+  margin: 80px 0 130px;
 }
 .album .container {
   padding: 0 20px;

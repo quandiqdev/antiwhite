@@ -5,7 +5,7 @@ import newsImg2 from "../../assets/images/main/blockimage2.jpg";
 import newsImg3 from "../../assets/images/main/blockimage3.jpg";
 export default function Main() {
   return (
-    <div className="main">
+    <section className="main">
       <div className="container">
         <div className="main__wrapper">
           <div className="main__subtitle">Последние новости</div>
@@ -20,7 +20,7 @@ export default function Main() {
               </div>
               <Link className="main__news-link">
                 <h3 className="news__link-title">
-                  Заголовоккк Заголовок одной из последних новостей лейбла
+                  Заголовок одной из последних новостей лейбла
                 </h3>
                 <p className="news__link-date">
                   <span>
@@ -37,7 +37,7 @@ export default function Main() {
               </div>
               <Link className="main__news-link">
                 <h3 className="news__link-title">
-                  Заголовоккк Заголовок одной из последних новостей лейбла
+                  Заголовок одной из последних новостей лейбла
                 </h3>
                 <p className="news__link-date">
                   <span>
@@ -54,7 +54,7 @@ export default function Main() {
               </div>
               <Link className="main__news-link">
                 <h3 className="news__link-title">
-                  Заголовоккк Заголовок одной из последних новостей лейбла
+                  Заголовок одной из последних новостей лейбла
                 </h3>
                 <p className="news__link-date">
                   <span>
@@ -67,6 +67,6 @@ export default function Main() {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

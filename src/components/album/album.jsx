@@ -3,7 +3,7 @@ import albumImg from "../../assets/images/main/single.jpg";
 import warningIcon from "../../assets/images/main/warning.svg";
 export default function Album() {
   return (
-    <div className="album">
+    <section className="album">
       <div className="container">
         <div className="album__wrapper">
           <p className="album__subtitle">Релизы</p>
@@ -52,6 +52,6 @@ export default function Album() {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

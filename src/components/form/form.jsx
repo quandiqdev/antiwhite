@@ -49,7 +49,7 @@ export default function Form() {
   };
 
   return (
-    <div className="form">
+    <section className="form">
       <div className="container">
         <div className="form__inner">
           <div className="form__info">
@@ -115,6 +115,6 @@ export default function Form() {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

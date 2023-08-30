@@ -11,6 +11,7 @@ body {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
+  height: 100%;
   font-family: "Raleway";
   font-weight: 500;
   font-size: 18px;
@@ -19,15 +20,22 @@ body {
   text-align: left;
   scroll-behavior: smooth;
   background-color: $black;
-  background-image: url('./../images/main/Background.webp');
+  background-image: url("./../images/main/Background.webp");
   background-position: 0 0;
   background-size: cover;
+}
+#root{
+  height: 100%;
+}
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 @import "../../components/header/scss/header-mobile";
 @import "../../components/header/scss/header-tablet";
 @import "../../components/header/scss/header-desktop";
-
 
 @import "../../components/intro/scss/intro-mobile";
 @import "../../components/intro/scss/intro-tablet";

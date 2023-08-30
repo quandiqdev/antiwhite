@@ -3,7 +3,7 @@ import shopImg from "../../assets/images/main/shopImg.jpg";
 import cartIcon from "../../assets/images/main/basket.svg";
 export default function Shop() {
   return (
-    <div className="shop">
+    <section className="shop">
       <div className="container">
         <div className="shop__wrapper">
           <p className="shop__subtitle">Мерч</p>
@@ -89,6 +89,6 @@ export default function Shop() {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
