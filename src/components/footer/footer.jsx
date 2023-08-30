@@ -1,26 +1,23 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import footerLogo from "../../assets/images/main/header-logo.png";
 
 export default function Footer() {
   const handleLinkClick = () => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
   }, []);
 
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer__wrapper">
-          {/* <div className="footer__logo">
-            <img src={footerLogo} alt="" />
-          </div> */}
-          <div className="footer__info">
-            Все запросы должны отправляться на почту kelatto@invariancerecords.com
-          </div>
+          <p className="footer__info">
+            Все запросы должны отправляться на почту
+            kelatto@invariancerecords.com
+          </p>
           <ul className="footer__list">
             <li className="footer__list-item">
               <Link

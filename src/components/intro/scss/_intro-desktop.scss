@@ -1,0 +1,20 @@
+@media (min-width: 1020px) {
+  .intro {
+    margin-top: 100px;
+    background-color: $black;
+    background-position: center 0;
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    &-title {
+      font-size: 96px;
+      line-height: 77.123px;
+    }
+
+    &-subtitle {
+      width: 491px;
+      margin: 0 auto;
+    }
+  }
+}

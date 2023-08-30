@@ -1,18 +1,29 @@
-@media (min-width:1020px) {
-    .footer {
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        &__list {
-            width: 45%;
-            margin-top: 0;
-        }
-
-        &__info {
-            width: 45%;
-            margin-top: 0;
-        }
+@media (min-width: 1020px) {
+  .footer {
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
     }
+
+    &__list {
+      width: 55%;
+      justify-content: flex-end;
+      margin-top: 0;
+      &-link {
+        &:hover {
+          cursor: pointer;
+          color: $primary;
+
+          &::after {
+            transform: scaleX(0.5);
+          }
+        }
+      }
+    }
+
+    &__info {
+      width: 45%;
+      margin-top: 0;
+    }
+  }
 }

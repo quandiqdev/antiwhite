@@ -1,105 +1,131 @@
 .main {
-    .container {
-      padding: 0 20px;
-    }
-  
-    &__wrapper {
-      @include flex(column, center, inherit);
-    }
-  
-    &__subtitle {
-      letter-spacing: -0.54px;
-      @include font(16px, $ffRalewaySemiBold, 600, #8B77FE, uppercase, left, 95%);
-    }
-  
-    &__title {
-      margin-top: 16px;
-      letter-spacing: -0.8px;
-      @include font(36px, $ffRalewayBold, 700, #fff, inherit, left, 95%);
-    }
-  
-    &__news {
-      @include flex(column, center, inherit);
-      align-items: center;
-      margin-top: 24px;
-  
-      &-item {
-        overflow: hidden;
-        @include flex(column, flex-end, inherit);
-        width: 100%;
-        height: 272px;
-        padding: 24px;
-        border-radius: 16px;
-        background: #0D0D0D;
-        margin-top: 24px;
-        position: relative;
-  
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            0deg,
-            rgba(3, 3, 3, 0.82) 0%,
-            rgba(255, 249, 249, 0) 100%
-          );
-          z-index: 1;
-          border-radius: 16px;
-        }
-      }
-  
-      &-img {
-        transition: all 400ms linear;
+  margin-top: 160px;
+  .container {
+    padding: 0 20px;
+  }
+
+  &__wrapper {
+    @include flex(column, center, inherit);
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: $primary;
+    text-transform: uppercase;
+    line-height: 95%;
+    letter-spacing: -0.54px;
+  }
+
+  &__title {
+    margin-top: 16px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 95%;
+    letter-spacing: -0.8px;
+  }
+
+  &__news {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+
+    &-item {
+      overflow: hidden;
+      width: 100%;
+      @include flex(column, flex-end, inherit);
+      min-height: 272px;
+      padding: 24px;
+      border-radius: 16px;
+      background: $dark;
+      position: relative;
+
+      &::before {
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
-        border-radius: 16px;
         width: 100%;
         height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(3, 3, 3, 0.82) 0%,
+          rgba(255, 249, 249, 0) 100%
+        );
+        z-index: 1;
+        border-radius: 16px;
+      }
+    }
+
+    &-img {
+      transition: all 400ms linear;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+      background-color: #d3d3d3;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         filter: brightness(50%);
-        background-color: lightgray;
-        z-index: 2;
       }
-  
-      &-item:hover &-img {
-        transform: scale(1.2);
-      }
-  
-      &-link {
+    }
+
+
+    &-link {
+      position: relative;
+      z-index: 3;
+
+      .news__link-title {
+        max-height: 91px;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 95%;
+        letter-spacing: -0.64px;
         position: relative;
-        z-index: 3;
-  
-        .news__link-title {
-          @include font(28px, $ffRalewaySemiBold, 600, #fff, inherit, left, 95%);
-          letter-spacing: -0.64px;
-  
-          position: relative;
-          z-index: 4;
-          &:hover{
-            text-decoration: underline;
-          }
-        }
-  
-        .news__link-date {
-          @include flex(row, left, inherit);
-          align-items: center;
-          @include font(
-            16px,
-            $ffRalewayMed,
-            500,
-            rgba(255, 255, 255, 0.56),
-            inherit,
-            left,
-            95%
-          );
-          letter-spacing: -0.54px;
-          margin-top: 16px;
-         
-        }
+        z-index: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .news__link-date {
+        @include flex(row, left, inherit);
+        align-items: center;
+        margin-top: 16px;
+        font-size: 16px;
+        color: #ffffff8f;
+        line-height: 95%;
+        letter-spacing: -0.54px;
       }
     }
   }
-  
+  br {
+    display: none;
+  }
+}
+@media (min-width: 420px) {
+  .main {
+    &__news {
+      width: 90%;
+      margin: 24px auto 0;
+    }
+  }
+}
+
+@media (min-width: 560px) {
+  .main {
+    &__news {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 24px auto 0;
+      &-img {
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+}

@@ -1,101 +1,94 @@
 .artists {
-    .container {
-        padding: 0 20px;
+  margin-top: 80px;
+  .container {
+    padding: 0 20px;
+  }
+
+  &__wrapper {
+    @include flex(column, center, inherit);
+    align-items: center;
+  }
+
+  &__subtitle {
+    color: $primary;
+    font-size: 18px;
+    line-height: 95%;
+    letter-spacing: -0.54px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 95%;
+    letter-spacing: -0.8px;
+    margin-top: 16px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-top: 48px;
+
+    &-item {
+      width: 100%;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid $dark;
+      background: $black;
+    }
+    &-link {
+      @include flex(column, baseline, inherit);
+      height: 100%;
     }
 
-    &__wrapper {
-        @include flex(column, center, inherit);
-        align-items: center;
-        margin-top: 80px;
-    }
+    &-img {
+      height: 150px;
+      width: 100%;
+      overflow: hidden;
+      object-fit: cover;
 
-
-    &__subtitle {
-        color: #8B77FE;
-        font-family: Raleway;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 95%;
-        letter-spacing: -0.54px;
-        text-transform: uppercase;
-    }
-
-    &__title {
-        color: #FFF;
-        text-align: center;
-        font-family: Raleway;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 95%;
-        /* 38px */
-        letter-spacing: -0.8px;
-        margin-top: 16px;
-    }
-
-    &__list {
-        @include flex(column, flex-start, inherit);
-        align-items: flex-start;
-        list-style-type: none;
+      img {
+        transition: all 600ms linear;
+        border-radius: 8px;
         width: 100%;
-        margin-top: 48px;
-
-        &-item {
-            width: 100%;
-            padding: 20px;
-            border-radius: 16px;
-            border: 1px solid #0D0D0D;
-            background: #000;
-        }
-
-        &-item+&-item {
-            margin-top: 12px;
-        }
-
-        &-link {
-            @include flex(column, flex-start, inherit);
-            align-items: flex-start;
-        }
-
-        &-img {
-            height: 150px;
-            width: 100%;
-            overflow: hidden;
-
-            img {
-                transition: all 600ms linear;
-                border-radius: 8px;
-                width: 100%;
-                height: 100%;
-
-                &:hover {
-                    transform: scale(1.2);
-                    border-radius: 8px;
-                }
-            }
-        }
-
-        &-name {
-            color: #FFF;
-            font-family: Raleway;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 95%;
-            letter-spacing: -0.48px;
-            margin-top: 20px;
-            margin-bottom: 12px;
-        }
-
-        &-about {
-            color: rgba(255, 255, 255, 0.56);
-            font-family: Raleway;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 130%;
-            letter-spacing: -0.54px;
-        }
+        height: 100%;
+        object-fit: cover;
+      }
     }
+
+    &-name {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 95%;
+      letter-spacing: -0.48px;
+      margin: 20px 0 12px;
+    }
+
+    &-about {
+      color: #ffffff8f;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: -0.54px;
+      margin-top: auto;
+    }
+  }
+}
+@media (min-width: 375px) {
+  .artists {
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
+@media (min-width: 480px) {
+  .artists {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

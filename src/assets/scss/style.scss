@@ -1,37 +1,37 @@
-html {
-    box-sizing: border-box;
-}
-body {
-    min-width: 320px;
-    overflow-x: hidden;
-    color: #fff;
-    background-color: #000000;
-    background-image: url(./../images/main/Background.webp);
-    background-position:0 0 ;
-    background-size: cover;
-    background-repeat: repeat-y;
-}
-
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    appearance: none;
-    margin: 0;
-}
-
 @import "./reset";
 @import "./vars";
 @import "./fonts";
 @import "./mixins";
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: $white;
+  text-align: left;
+  scroll-behavior: smooth;
+  background-color: $black;
+  background-image: url('./../images/main/Background.webp');
+  background-position: 0 0;
+  background-size: cover;
+}
 
 @import "../../components/header/scss/header-mobile";
 @import "../../components/header/scss/header-tablet";
 @import "../../components/header/scss/header-desktop";
+
+
+@import "../../components/intro/scss/intro-mobile";
+@import "../../components/intro/scss/intro-tablet";
+@import "../../components/intro/scss/intro-desktop";
 
 @import "../../components//main/scss/main-mobile";
 @import "../../components//main/scss/main-tablet";
