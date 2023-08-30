@@ -66,7 +66,7 @@ export default function Single() {
                 Сингл
               </Link>
               <Link to="#" className="single__list-name">
-                Название трека афывоалф двоыалд фоыва лфвоыа дфлвоыа
+                Название трека
               </Link>
               <Link to="#" className="single__list-singer">
                 Nickname

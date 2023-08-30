@@ -11,72 +11,84 @@ import Album from "../../album/album";
 import Intro from "../../intro/intro";
 export default function AppRoute() {
   return (
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="body-wrapper">
-              <Header />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Header />
+            <main>
               <Intro />
               <Main />
               <Form />
               <Footer />
-            </div>
-          }
-        />
-        <Route
-          path="/singers"
-          element={
-            <div className="body-wrapper">
-              <Header />
+            </main>
+          </>
+        }
+      />
+      <Route
+        path="/singers"
+        element={
+          <>
+            <Header />
+            <main>
               <Artists />
-              <Footer />
-            </div>
-          }
-        />
+            </main>
+            <Footer />
+          </>
+        }
+      />
 
-        <Route
-          path="/services"
-          element={
-            <div className="body-wrapper">
-              <Header />
+      <Route
+        path="/services"
+        element={
+          <>
+            <Header />
+            <main>
               <Services />
-              <Footer />
-            </div>
-          }
-        />
+            </main>
+            <Footer />
+          </>
+        }
+      />
 
-        <Route
-          path="/shop"
-          element={
-            <div className="body-wrapper">
-              <Header />
+      <Route
+        path="/shop"
+        element={
+          <>
+            <Header />
+            <main>
               <Shop />
-              <Footer />
-            </div>
-          }
-        />
+            </main>
+            <Footer />
+          </>
+        }
+      />
 
-        <Route
-          path="/single"
-          element={
-            <div className="body-wrapper">
-              <Header />
+      <Route
+        path="/single"
+        element={
+          <>
+            <Header />
+            <main>
               <Single />
-              <Footer />
-            </div>
-          }
-        />
-        <Route
-          path="/album"
-          element={
-            <div className="body-wrapper">
-              <Header />
+            </main>
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/album"
+        element={
+          <>
+            <Header />
+            <main>
               <Album />
-              <Footer />
-            </div>
-          }
-        />
-      </Routes>
+            </main>
+            <Footer />
+          </>
+        }
+      />
+    </Routes>
   );
 }
