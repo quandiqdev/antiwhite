@@ -1,5 +1,7 @@
 @media (min-width: 1020px) {
   .intro {
+  height: calc(100vh - 75px);
+
     background-color: $black;
     background-position: center 0;
     .container {

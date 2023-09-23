@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import uploadSVG from "../../assets/images/main/upload.svg";
 export default function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [fileError, setFileError] = useState("");
+
   const handleFileChange = (e) => {
     const files = Array.from(e.target.files);
     const totalSize = files.reduce((total, file) => total + file.size, 0);
@@ -54,54 +56,32 @@ export default function Form() {
         <div className="form__inner">
           <div className="form__info">
             <h1 className="form__subtitle">ЗАЯВКА НА ВСТУПЛЕНИЕ</h1>
-            <p className="form__title">
-              Считаете, что готовы стать нашим артистом? Тогда самое время нам
-              написать
-            </p>
+            <p className="form__title">Считаете, что готовы стать нашим артистом? Тогда самое время нам написать</p>
             <p className="form__subtitle-bottom">
-              Заполните заявку, и наш менеджер свяжется с вами для дальнейшего
-              обсуждения
+              Заполните заявку, и наш менеджер свяжется с вами для дальнейшего обсуждения
             </p>
           </div>
           <form className="form__input" onSubmit={handleSubmit}>
             <div className="form__input-name">
               <label htmlFor="name">Ваше имя</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Никита"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
+              <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
             </div>
             <div className="form__input-mail">
               <label htmlFor="mail">Ваша почта</label>
-              <input
-                type="email"
-                id="mail"
-                placeholder="abc@gmail.com."
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+              <input type="email" id="mail" value={email} onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div className="form__input-about">
               <label htmlFor="about">О вас</label>
-              <input
-                type="text"
-                id="about"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-              />
+              <input type="text" id="about" value={message} onChange={(e) => setMessage(e.target.value)} required />
             </div>
             <div className="form__input-file">
-              <label htmlFor="file">Прикрепить файлы</label>
-              <label htmlFor="file">Выберите файлы</label>
-              {selectedFiles.length > 0 && (
-                <div>Selected files: {selectedFiles.length}</div>
-              )}
+              <label htmlFor="file">
+                <span>
+                  <img src={uploadSVG} alt="" />
+                </span>
+                <p>Прикрепить файлы</p>
+              </label>
+              {selectedFiles.length > 0 && <div>Selected files: {selectedFiles.length}</div>}
               {fileError && <div className="error">{fileError}</div>}
               <input
                 type="file"

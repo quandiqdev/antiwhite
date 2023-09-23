@@ -6,17 +6,16 @@ export default function Single() {
       <div className="container">
         <div className="single__wrapper">
           <p className="single__subtitle">Релизы</p>
-          <h1 className="single__title">
-            Последние опубликованные треки артистов
-          </h1>
+          <h1 className="single__title">Последние опубликованные треки артистов</h1>
           <div className="single__btn">
             <button className="single__btn-active">Синглы</button>
             <Link to="/album">
               <button className="single__btn-inactive">Альбомы</button>
             </Link>
           </div>
+          <p className="soon">SOON...</p>
           <ul className="single__list">
-            <li className="single__list-item">
+            {/* <li className="single__list-item">
               <div className="single__list-img">
                 <img src={singleImg} alt="singleImg" />
               </div>
@@ -29,49 +28,7 @@ export default function Single() {
               <Link to="#" className="single__list-singer">
                 Nickname
               </Link>
-            </li>
-            <li className="single__list-item">
-              <div className="single__list-img">
-                <img src={singleImg} alt="singleImg" />
-              </div>
-              <Link to="#" className="single__list-title">
-                Сингл
-              </Link>
-              <Link to="#" className="single__list-name">
-                Название трека
-              </Link>
-              <Link to="#" className="single__list-singer">
-                Nickname
-              </Link>
-            </li>
-            <li className="single__list-item">
-              <div className="single__list-img">
-                <img src={singleImg} alt="singleImg" />
-              </div>
-              <Link to="#" className="single__list-title">
-                Сингл
-              </Link>
-              <Link to="#" className="single__list-name">
-                Название трека
-              </Link>
-              <Link to="#" className="single__list-singer">
-                Nickname
-              </Link>
-            </li>
-            <li className="single__list-item">
-              <div className="single__list-img">
-                <img src={singleImg} alt="singleImg" />
-              </div>
-              <Link to="#" className="single__list-title">
-                Сингл
-              </Link>
-              <Link to="#" className="single__list-name">
-                Название трека
-              </Link>
-              <Link to="#" className="single__list-singer">
-                Nickname
-              </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

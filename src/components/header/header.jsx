@@ -59,7 +59,7 @@ export default function Header() {
               </li>
               <li className="header__list-item">
                 <Link
-                  to="/single"
+                  to="/music"
                   className="header__list-link"
                   onClick={handleMenuClose}
                 >

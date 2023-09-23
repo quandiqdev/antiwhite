@@ -1,16 +1,20 @@
 .intro {
   overflow: hidden;
-  padding-top: 80px;
   height: calc(100vh - 86px);
   background: url("../../assets/images/main/headermain-bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .container {
     padding: 0 20px;
   }
   &__inner {
+    margin-bottom: 200px;
     .anim {
       opacity: 0;
       transform: translateY(30px);
@@ -48,11 +52,7 @@
     letter-spacing: -1.28px;
     text-align: center;
     background: $primary;
-    background: radial-gradient(
-      circle farthest-corner at center center,
-      $primary 0%,
-      $white 100%
-    );
+    background: radial-gradient(circle farthest-corner at center center, $primary 0%, $white 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

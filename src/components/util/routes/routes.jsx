@@ -66,7 +66,7 @@ export default function AppRoute() {
       />
 
       <Route
-        path="/single"
+        path="/music"
         element={
           <>
             <Header />

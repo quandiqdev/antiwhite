@@ -11,13 +11,15 @@ export default function Album() {
             Последние опубликованные треки артистов
           </h1>
           <div className="album__btn">
-            <Link to="/single">
+            <Link to="/music">
               <button className="album__btn-inactive">Синглы</button>
             </Link>
             <button className="album__btn-active">Альбомы</button>
           </div>
+            <p className="soon">SOON...</p>
           <ul className="album__list">
-            <li className="album__list-item">
+            
+            {/* <li className="album__list-item">
               <div className="album__list-img">
                 <img src={albumImg} alt="albumImg" />
               </div>
@@ -48,7 +50,7 @@ export default function Album() {
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
