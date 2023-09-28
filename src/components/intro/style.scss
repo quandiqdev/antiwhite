@@ -5,7 +5,7 @@
 
 .intro {
   overflow: hidden;
-  height: calc(100vh - 86px);
+  height: 100vh;
   background: url("../../assets/images/main/headermain-bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
     padding: 0 20px;
   }
   &__inner {
-    margin-bottom: 200px;
+    margin-bottom: 160px;
     .anim {
       opacity: 0;
       transform: translateY(30px);
@@ -42,11 +42,12 @@
   }
 
   .title__anim {
+    animation: showup 1500ms linear forwards;
     animation-delay: 1000ms;
   }
 
   .subtitle__anim {
-    animation-delay: 1500ms;
+    animation-delay: 2500ms;
   }
 
   &-title {
@@ -56,11 +57,11 @@
     line-height: 51.415px;
     letter-spacing: -1.28px;
     text-align: center;
-    background: $primary;
-    background: radial-gradient(circle farthest-corner at center center, $primary 0%, $white 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    transition: all 400ms linear;
   }
 
   &-subtitle {
@@ -70,6 +71,35 @@
     text-align: center;
     line-height: 130%;
     animation-delay: 1.5s;
+  }
+
+  @keyframes showup {
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    75% {
+      opacity: 1;
+      background: $primary;
+      background: radial-gradient(circle farthest-corner at center center, $white 0%, $white 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #fff;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+      background: $primary;
+      background: radial-gradient(circle farthest-corner at center center, $primary 0%, $white 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px transparent;
+    }
   }
 
   @keyframes moveup {
@@ -93,35 +123,34 @@
 // --tablet v styles'
 
 @media (min-width: 750px) {
-    .intro {
-      .container {
-        padding: 0 20px;
-      }
+  .intro {
+    .container {
+      padding: 0 20px;
     }
   }
-  
+}
+
 // --desktop v styles
 
 @media (min-width: 1020px) {
-    .intro {
-      height: calc(100vh - 75px);
-      background-color: $black;
-      background-position: 0 0;
-  
-      .container {
-        max-width: 1300px;
-        margin: 0 auto;
-      }
-  
-      &-title {
-        font-size: 96px;
-        line-height: 77.123px;
-      }
-  
-      &-subtitle {
-        width: 491px;
-        margin: 0 auto;
-      }
+  .intro {
+    height: calc100vh;
+    background-color: $black;
+    background-position: 0 0;
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    &-title {
+      font-size: 96px;
+      line-height: 77.123px;
+    }
+
+    &-subtitle {
+      width: 491px;
+      margin: 0 auto;
     }
   }
-  
+}
