@@ -1,4 +1,6 @@
 import mainLogo from "../../assets/images/main/header-main-logo.png";
+import "./style.scss";
+
 export default function Intro() {
   return (
     <section className="intro">

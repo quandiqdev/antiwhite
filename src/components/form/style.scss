@@ -1,3 +1,8 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+// --mobile v styles
+
 .form {
   margin: 116px 0 130px;
   .container {
@@ -139,5 +144,40 @@
   .form__input-mail:focus-within,
   .form__input-about:focus-within {
     border: 1px solid $primary;
+  }
+}
+
+// --tablet v styles
+
+@media (min-width: 750px) {
+  .form {
+    .container {
+      padding: 0 20px;
+    }
+  }
+}
+
+// --desktop v styles
+
+@media (min-width: 1020px) {
+  .form {
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    &__inner {
+      @include flex(row, space-between, inherit);
+      align-items: flex-start;
+    }
+
+    &__info {
+      flex-basis: 618px;
+      margin-top: 52px;
+    }
+
+    &__input {
+      flex-basis: 419px;
+    }
   }
 }

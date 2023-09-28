@@ -3,6 +3,8 @@ import dateIcon from "../../assets/images/main/calendardate.svg";
 import newsImg1 from "../../assets/images/main/blockimage1.jpg";
 import newsImg2 from "../../assets/images/main/blockimage2.jpg";
 import newsImg3 from "../../assets/images/main/blockimage3.jpg";
+import "./style.scss";
+
 export default function Main() {
   return (
     <section className="main">

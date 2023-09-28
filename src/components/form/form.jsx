@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import uploadSVG from "../../assets/images/main/upload.svg";
+import "./style.scss";
+
 export default function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import shopImg from "../../assets/images/main/shopImg.jpg";
 import cartIcon from "../../assets/images/main/basket.svg";
+import "./style.scss";
+
 export default function Shop() {
   return (
     <section className="shop">

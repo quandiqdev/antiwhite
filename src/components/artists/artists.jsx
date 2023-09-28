@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import ArtistImg from "../../assets/images/main/artists.jpg";
+import "./style.scss";
+
 export default function Artists() {
   return (
     <section className="artists">

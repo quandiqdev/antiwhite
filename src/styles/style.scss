@@ -1,0 +1,37 @@
+@import "./reset";
+@import "./vars";
+@import "./fonts";
+@import "./mixins";
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: $white;
+  text-align: left;
+  scroll-behavior: smooth;
+  background-color: $black;
+  background-image: url("../assets/images/main/Background.webp");
+  background-position: 0 0;
+  background-size: cover;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.soon {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+}

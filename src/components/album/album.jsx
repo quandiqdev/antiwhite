@@ -1,24 +1,23 @@
 import { Link } from "react-router-dom";
 import albumImg from "../../assets/images/main/single.jpg";
 import warningIcon from "../../assets/images/main/warning.svg";
+import "./style.scss";
+
 export default function Album() {
   return (
     <section className="album">
       <div className="container">
         <div className="album__wrapper">
           <p className="album__subtitle">Релизы</p>
-          <h1 className="album__title">
-            Последние опубликованные треки артистов
-          </h1>
+          <h1 className="album__title">Последние опубликованные треки артистов</h1>
           <div className="album__btn">
             <Link to="/music">
               <button className="album__btn-inactive">Синглы</button>
             </Link>
             <button className="album__btn-active">Альбомы</button>
           </div>
-            <p className="soon">SOON...</p>
+          <p className="soon">SOON...</p>
           <ul className="album__list">
-            
             {/* <li className="album__list-item">
               <div className="album__list-img">
                 <img src={albumImg} alt="albumImg" />

@@ -1,0 +1,226 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+// --mobile v styles
+
+.album {
+  margin: 80px 0 130px;
+  .container {
+    padding: 0 20px;
+  }
+  &__wrapper {
+    @include flex(column, center, inherit);
+    align-items: center;
+  }
+
+  &__subtitle {
+    color: $primary;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 95%;
+    letter-spacing: -0.54px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 95%;
+    letter-spacing: -0.8px;
+    margin-top: 16px;
+  }
+
+  &__btn {
+    @include flex(row, inherit, inherit);
+    margin-top: 24px;
+
+    &-active,
+    &-inactive {
+      cursor: pointer;
+      display: flex;
+      padding: 9px 18px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    &-active {
+      border: 1px solid transparent;
+      background: $primary;
+      color: $white;
+    }
+
+    &-inactive {
+      margin-right: 12px;
+      border: 1px solid $primary;
+      background: transparent;
+      color: $primary;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-top: 48px;
+
+    &-item {
+      width: 100%;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid #0d0d0d;
+      background: #000;
+    }
+    &-img {
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        transition: all 600ms linear;
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-title {
+      color: $primary;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 95%;
+      letter-spacing: -0.54px;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+
+    &-name {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 95%;
+        letter-spacing: -0.48px;
+      }
+
+      margin: 8px 0;
+    }
+
+    &-singer {
+      color: #ffffff8f;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: -0.54px;
+    }
+
+    &-tracks {
+      list-style-type: none;
+
+      .tracks__list-item {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: -0.36px;
+        margin-top: 8px;
+        padding: 14px;
+        gap: 8px;
+        align-self: stretch;
+        border-radius: 4px;
+        background: $dark;
+        counter-increment: track-counter;
+      }
+
+      .tracks__list-item::before {
+        content: counter(track-counter) "   ";
+        padding-right: 4px;
+        color: #ffffff8f;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: -0.54px;
+      }
+    }
+  }
+}
+@media (min-width: 375px) {
+  .album {
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .album {
+    &__list {
+      &-item {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// --tablet v styles
+
+@media (min-width: 750px) {
+  .album {
+    .container {
+      padding: 0 20px;
+    }
+  }
+}
+
+// --desktop v styles
+
+@media (min-width: 1020px) {
+  .album {
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      max-width: 662px;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 95%;
+      letter-spacing: -0.96px;
+    }
+
+    &__list {
+      width: 850px;
+      &-img {
+        flex-basis: 445px;
+        img {
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      &-wrapper {
+        margin-left: 32px;
+        flex-basis: calc(850px - 445px);
+      }
+
+      &-item {
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid $dark;
+        background: $black;
+        margin-top: 12px;
+      }
+    }
+  }
+}

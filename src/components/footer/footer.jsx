@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import "./style.scss";
 
 export default function Footer() {
   const handleLinkClick = () => {
@@ -14,7 +15,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer__wrapper">
-          <Link to="mailto:connections@invariancerecords.com" className="footer__info">connections@invariancerecords.com</Link>
+          <Link to="mailto:connections@invariancerecords.com" className="footer__info">
+            connections@invariancerecords.com
+          </Link>
           <p className="footer__copyright">Copyright © 2023 Invariance Records. All Rights Reserved.</p>
           <ul className="footer__list">
             <li className="footer__list-item">

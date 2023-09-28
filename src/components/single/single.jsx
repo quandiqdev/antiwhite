@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import singleImg from "../../assets/images/main/single.jpg";
+import "./style.scss";
+
 export default function Single() {
   return (
     <section className="single">

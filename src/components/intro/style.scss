@@ -1,3 +1,8 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+// --mobile v styles
+
 .intro {
   overflow: hidden;
   height: calc(100vh - 86px);
@@ -84,3 +89,39 @@
     }
   }
 }
+
+// --tablet v styles'
+
+@media (min-width: 750px) {
+    .intro {
+      .container {
+        padding: 0 20px;
+      }
+    }
+  }
+  
+// --desktop v styles
+
+@media (min-width: 1020px) {
+    .intro {
+      height: calc(100vh - 75px);
+      background-color: $black;
+      background-position: 0 0;
+  
+      .container {
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+  
+      &-title {
+        font-size: 96px;
+        line-height: 77.123px;
+      }
+  
+      &-subtitle {
+        width: 491px;
+        margin: 0 auto;
+      }
+    }
+  }
+  
